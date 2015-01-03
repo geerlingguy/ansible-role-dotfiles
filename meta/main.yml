@@ -1,0 +1,24 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: geerlingguy
+  description: Dotfile installation for UNIX/Linux.
+  company: "Midwestern Mac, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.4
+  - name: GenericUNIX
+    versions:
+      - all
+      - any
+  - name: GenericBSD
+    versions:
+      - all
+      - any
+  - name: GenericLinux
+    versions:
+      - all
+      - any
+  categories:
+    - development
+    - system
