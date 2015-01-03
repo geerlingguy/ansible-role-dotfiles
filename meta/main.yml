@@ -7,6 +7,7 @@ galaxy_info:
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
   min_ansible_version: 1.4
+  platforms:
   - name: GenericUNIX
     versions:
       - all

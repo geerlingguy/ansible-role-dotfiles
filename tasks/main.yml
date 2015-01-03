@@ -6,25 +6,24 @@
   sudo: no
 
 - name: Ensure all configured dotfiles are links.
-  shell: "ls -F ~/{{ item }}"
-  register: is_link
+  shell: "ls -F {{ dotfiles_home }}/{{ item }}"
+  register: existing_dotfile_info
   failed_when: false
   always_run: yes
   changed_when: false
   with_items: dotfiles_files
 
-# TODO LOOP index on dotfiles_files?
-- name: Remove current .bash_profile file if necessary.
+- name: Remove existing dotfiles file if a replacement is being linked.
   file:
-    path: "~/{{ dotfiles_files }}"
+    path: "{{ dotfiles_home }}/{{ dotfiles_files[item.0] }}"
     state: absent
-  when: "'@' not in {{ item }}.stdout"
-  with_items: is_link
+  when: "'@' not in item.1.stdout"
+  with_indexed_items: existing_dotfile_info.results
 
 - name: Link dotfiles into home folder.
   file:
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
-    dest: "~/{{ item }}"
+    dest: "{{ dotfiles_home }}/{{ item }}"
     state: link
   sudo: no
   with_items: dotfiles_files
