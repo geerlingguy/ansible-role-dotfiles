@@ -32,5 +32,5 @@ script:
   # Test if the file is a symbolic link.
   - >
     [ -h ~/.inputrc ]
-    && echo "Files were linked correctly"
-    || echo "File does not exists"
+    && echo "Files were linked correctly."
+    || echo "Files were not linked correctly."
