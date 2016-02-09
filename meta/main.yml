@@ -20,6 +20,6 @@ galaxy_info:
     versions:
       - all
       - any
-  categories:
+  galaxy_tags:
     - development
     - system

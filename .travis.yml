@@ -34,3 +34,6 @@ script:
     [ -h ~/.inputrc ]
     && (echo "Files were linked correctly." && exit 0)
     || (echo "Files were not linked correctly." && exit 1)
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
