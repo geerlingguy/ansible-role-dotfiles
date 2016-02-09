@@ -32,6 +32,10 @@ The home directory where dotfiles will be linked. Generally, the default should 
 
 Which files from the dotfiles repository should be linked to the `dotfiles_home`.
 
+Add the hostkey for the repo url if not already added. If ssh_opts contains "-o StrictHostKeyChecking=no", this parameter is ignored. Defaults to `No`
+
+    dotfiles_repo_accept_hostkey: yes
+
 ## Dependencies
 
 None
