@@ -16,6 +16,10 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The git repository to use for retrieving dotfiles. Dotfiles should generally be laid out within the root directory of the repository.
 
+    dotfiles_repo_accept_hostkey: no
+
+Add the hostkey for the repo url if not already added. If ssh_opts contains "-o StrictHostKeyChecking=no", this parameter is ignored.
+
     dotfiles_repo_local_destination: "~/Documents/dotfiles"
 
 The local path where the `dotfiles_repo` will be cloned.
