@@ -6,7 +6,7 @@ Installs a set of dotfiles from a given Git repository. By default, it will inst
 
 ## Requirements
 
-None.
+[git role](https://github.com/geerlingguy/ansible-role-git)
 
 ## Role Variables
 
