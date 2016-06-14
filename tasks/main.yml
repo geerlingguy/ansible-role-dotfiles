@@ -11,14 +11,14 @@
   failed_when: false
   always_run: yes
   changed_when: false
-  with_items: dotfiles_files
+  with_items: "{{ dotfiles_files }}"
 
 - name: Remove existing dotfiles file if a replacement is being linked.
   file:
     path: "{{ dotfiles_home }}/{{ dotfiles_files[item.0] }}"
     state: absent
   when: "'@' not in item.1.stdout"
-  with_indexed_items: existing_dotfile_info.results
+  with_indexed_items: "{{ existing_dotfile_info.results }}"
 
 - name: Link dotfiles into home folder.
   file:
@@ -26,4 +26,4 @@
     dest: "{{ dotfiles_home }}/{{ item }}"
     state: link
   become: no
-  with_items: dotfiles_files
+  with_items: "{{ dotfiles_files }}"
