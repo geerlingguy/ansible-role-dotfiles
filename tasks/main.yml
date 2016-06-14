@@ -3,7 +3,7 @@
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
-  sudo: no
+  become: no
 
 - name: Ensure all configured dotfiles are links.
   shell: "ls -F {{ dotfiles_home }}/{{ item }}"
@@ -25,5 +25,5 @@
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
     dest: "{{ dotfiles_home }}/{{ item }}"
     state: link
-  sudo: no
+  become: no
   with_items: dotfiles_files
