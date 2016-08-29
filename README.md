@@ -6,7 +6,7 @@ Installs a set of dotfiles from a given Git repository. By default, it will inst
 
 ## Requirements
 
-None.
+Requires `git` on the managed machine (you can easily install it with `geerlingguy.git` if required).
 
 ## Role Variables
 
