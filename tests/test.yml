@@ -2,4 +2,5 @@
 - hosts: all
 
   roles:
+    - geerlingguy.git
     - role_under_test
