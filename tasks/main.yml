@@ -10,7 +10,7 @@
   shell: "ls -F {{ dotfiles_home }}/{{ item }}"
   register: existing_dotfile_info
   failed_when: false
-  always_run: yes
+  check_mode: no
   changed_when: false
   with_items: "{{ dotfiles_files }}"
 
