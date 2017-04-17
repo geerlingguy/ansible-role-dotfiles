@@ -1,4 +1,10 @@
 ---
+- name: Ensure git is installed
+  apt:
+    name: git
+    state: present
+  sudo: true
+
 - name: Ensure dotfiles repository is cloned locally.
   git:
     repo: "{{ dotfiles_repo }}"
