@@ -22,6 +22,13 @@
   when: "'@' not in item.1.stdout"
   with_indexed_items: "{{ existing_dotfile_info.results }}"
 
+- name: Ensure parent folders of link dotfiles exist.
+  file:
+    path: "{{ (dotfiles_home ~ '/' ~ item) | dirname }}"
+    state: directory
+    follow: yes
+  with_items: "{{ dotfiles_files }}"
+
 - name: Link dotfiles into home folder.
   file:
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
