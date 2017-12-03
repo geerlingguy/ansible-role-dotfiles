@@ -1,6 +1,7 @@
 ---
 dotfiles_repo: "https://github.com/geerlingguy/dotfiles.git"
 dotfiles_repo_accept_hostkey: no
+dotfiles_repo_clone_recursive: no
 dotfiles_repo_local_destination: "~/Documents/dotfiles"
 
 dotfiles_home: "~"

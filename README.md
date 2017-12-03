@@ -20,6 +20,10 @@ The git repository to use for retrieving dotfiles. Dotfiles should generally be 
 
 Add the hostkey for the repo url if not already added. If ssh_opts contains "-o StrictHostKeyChecking=no", this parameter is ignored.
 
+    dotfiles_repo_clone_recursive: no
+
+Controls the `recursive` flag when cloning the dotfiles. If your dotfiles relies on [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), set this variable to `yes`.
+
     dotfiles_repo_local_destination: "~/Documents/dotfiles"
 
 The local path where the `dotfiles_repo` will be cloned.

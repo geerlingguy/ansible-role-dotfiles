@@ -4,6 +4,7 @@
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
+    recursive: "{{ dotfiles_repo_clone_recursive }}"
   become: no
 
 - name: Ensure all configured dotfiles are links.
