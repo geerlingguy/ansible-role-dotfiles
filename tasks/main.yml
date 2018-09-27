@@ -4,13 +4,13 @@
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
-  become: no
+  become: false
 
 - name: Ensure all configured dotfiles are links.
   shell: "ls -F {{ dotfiles_home }}/{{ item }}"
   register: existing_dotfile_info
   failed_when: false
-  check_mode: no
+  check_mode: false
   changed_when: false
   with_items: "{{ dotfiles_files }}"
 
@@ -26,5 +26,5 @@
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
     dest: "{{ dotfiles_home }}/{{ item }}"
     state: link
-  become: no
+  become: false
   with_items: "{{ dotfiles_files }}"

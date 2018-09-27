@@ -1,5 +1,7 @@
 ---
-- hosts: all
+- name: Converge
+  hosts: all
+  become: true
 
   pre_tasks:
     - name: Update apt cache.
@@ -7,5 +9,5 @@
       when: ansible_os_family == 'Debian'
 
   roles:
-    - geerlingguy.git
-    - role_under_test
+    - role: geerlingguy.git
+    - role: geerlingguy.dotfiles
