@@ -13,8 +13,9 @@ Requires `git` on the managed machine (you can easily install it with `geerlingg
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     dotfiles_repo: "https://github.com/geerlingguy/dotfiles.git"
+    dotfiles_repo_version: master
 
-The git repository to use for retrieving dotfiles. Dotfiles should generally be laid out within the root directory of the repository.
+The git repository and branch/tag/commit hash to use for retrieving dotfiles. Dotfiles should generally be laid out within the root directory of the repository.
 
     dotfiles_repo_accept_hostkey: false
 

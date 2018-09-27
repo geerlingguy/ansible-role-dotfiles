@@ -3,11 +3,12 @@
   git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
+    version: "{{ dotfiles_repo_version }}"
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
   become: false
 
 - name: Ensure all configured dotfiles are links.
-  shell: "ls -F {{ dotfiles_home }}/{{ item }}"
+  command: "ls -F {{ dotfiles_home }}/{{ item }}"
   register: existing_dotfile_info
   failed_when: false
   check_mode: false
