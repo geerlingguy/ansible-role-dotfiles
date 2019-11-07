@@ -30,7 +30,7 @@ The local path where the `dotfiles_repo` will be cloned.
 The home directory where dotfiles will be linked. Generally, the default should work, but in some circumstances, or when running the role as sudo on behalf of another user, you may want to specify the full path.
 
     dotfiles_files:
-      - .bash_profile
+      - .zshrc
       - .gitignore
       - .inputrc
       - .vimrc

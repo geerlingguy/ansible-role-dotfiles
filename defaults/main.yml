@@ -6,7 +6,7 @@ dotfiles_repo_local_destination: "~/Documents/dotfiles"
 
 dotfiles_home: "~"
 dotfiles_files:
-  - .bash_profile
+  - .zshrc
   - .gitignore
   - .inputrc
   - .vimrc
