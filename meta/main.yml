@@ -2,6 +2,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: dotfiles
   author: geerlingguy
   description: Dotfile installation for UNIX/Linux.
   company: "Midwestern Mac, LLC"
