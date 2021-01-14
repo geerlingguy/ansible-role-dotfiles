@@ -21,6 +21,8 @@
     state: absent
   when: "'@' not in item.1.stdout"
   with_indexed_items: "{{ existing_dotfile_info.results }}"
+  loop_control:
+    label: "{{ dotfiles_files[item.0] }}"
 
 - name: Link dotfiles into home folder.
   file:
