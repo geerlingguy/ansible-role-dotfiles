@@ -8,7 +8,7 @@
   become: false
 
 - name: Ensure all configured dotfiles are links.
-  command: "ls -F {{ dotfiles_home }}/{{ item }}"
+  command: "ls -F {{ dotfiles_home }}/'{{ item }}'"
   register: existing_dotfile_info
   failed_when: false
   check_mode: false
