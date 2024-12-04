@@ -27,7 +27,7 @@
     path: "{{ (dotfiles_home ~ '/' ~ item) | dirname }}"
     state: directory
     follow: true
-  become: no  
+  become: false
   with_items: "{{ dotfiles_files }}"
 
 - name: Link dotfiles into home folder.
