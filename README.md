@@ -1,6 +1,6 @@
 # Ansible Role: Dotfiles
 
-[![CI](https://github.com/geerlingguy/ansible-role-dotfiles/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-dotfiles/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-dotfiles/actions/workflows/ci.yml)
 
 Installs a set of dotfiles from a given Git repository. By default, it will install my (geerlingguy's) [dotfiles](https://github.com/geerlingguy/dotfiles), but you can use any set of dotfiles you'd like, as long as they follow a conventional format.
 
